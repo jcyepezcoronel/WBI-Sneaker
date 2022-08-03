@@ -1,0 +1,38 @@
+<div class="main">
+    <app-search name="searchRecipients" [control]="searchControl"></app-search>
+
+
+    <div class=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3   gap-8 p-[5rem]">
+
+
+        <div class="card" *ngFor="let product of dataresult | paginate: { itemsPerPage:6, currentPage: page, totalItems: totalLength }">
+            <div class="card-image">
+                <img [src]="product.img_url" alt="">
+            </div>
+            <div class="card-text">
+                <h2>Brand: {{product.brand}}</h2>
+                <p>Model: {{ product.product }}</p>
+            </div>
+            <div class="card-stats">
+                <div class="stat">
+                    <div class="value">Store:</div>
+                    <div class="type">
+                        <a [href]="product.store.link" target="_blank">
+                            <img [src]="product.store.img_url" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="value">Price:</div>
+                    <div class="type">{{product.price | currency}}</div>
+                </div>
+                <div class="stat">
+                    <div class="value">Date:</div>
+                    <div class="type">{{product.createdAt | date}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
+
+</div>

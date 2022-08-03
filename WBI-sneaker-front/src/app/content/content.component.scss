@@ -1,0 +1,110 @@
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 12px;
+        gap: 50px;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        border-radius: 18px;
+        background: white;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+        font-family: roboto;
+        text-align: center;
+        overflow: hidden;
+        margin: 0 25px;
+    }
+    
+    .main .container .card .img img {
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .card-image {
+        grid-area: image;
+    }
+    
+    .card-text {
+        grid-area: text;
+    }
+    
+    .card-stats {
+        grid-area: stats;
+    }
+    
+    .card-image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .card-text {
+        grid-area: text;
+        margin: 25px;
+    }
+    
+    .card-text p {
+        color: grey;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    
+    .card-text h2 {
+        margin-top: 0px;
+        font-size: 28px;
+    }
+    
+    .card-stats {
+        grid-area: stats;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: rgba(112, 188, 166, 0.769);
+    }
+    
+    .card-stats .stat {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        padding: 10px;
+    }
+    
+    .card .card-stats .stat .type a img {
+        max-width: 50px;
+        object-fit: contain;
+    }
+    
+    // .img {
+    //     grid-area: img;
+    //     height: 120px;
+    //     width: 320px;
+    // }
+    // .title {
+    //     grid-area: title;
+    //     padding-top: 1em;
+    // }
+    // .description {
+    //     grid-area: description;
+    // }
+    // .price {
+    //     grid-area: price;
+    // }
+    // .date {
+    //     grid-area: date;
+    // }
+    // .store {
+    //     grid-area: store;
+    //     display: flex;
+    // }
